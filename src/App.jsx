@@ -1,18 +1,27 @@
-import './index.css';
-
-import Header from './components/Header';
-import Error from './components/Error';
-import Footer from './components/Footer';
-import Form from './components/TaskForm';
+import React, { useState } from "react";
+import Header from "./components/Header";
+import TaskForm from "./components/TaskForm";
+import TaskList from "./components/TaskList";
+import Footer from "./components/Footer";
 
 function App() {
+  const [tasks, setTasks] = useState([]);
+
+  const addTask = (task) => {
+    setTasks([task, ...tasks]);
+  };
+
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
+
   return (
-    <>
-      <Header></Header>
-      <Form></Form>
-      <Error></Error>
-      <Footer></Footer>
-    </>
+    <div className="max-w-xl mx-auto mt-10 border rounded shadow-lg p-4">
+      <Header />
+      <TaskForm onAdd={addTask} />
+      <TaskList tasks={tasks} onDelete={deleteTask} />
+      <Footer />
+    </div>
   );
 }
 

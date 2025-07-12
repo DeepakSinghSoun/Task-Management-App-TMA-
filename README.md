@@ -1,45 +1,58 @@
 # ✅ Task Management App (TMA)
 
-A simple and intuitive Task Management App (TMA) built to help users create, manage, and track their daily tasks efficiently. This project focuses on organizing tasks based on priority, status, and deadlines with a clean and responsive user interface.
+📌 **Project Name:** TMA – Task Management App
 
----
+🗓️ **Started On:** July 11, 2025
 
-## 📌 Features
+This is the beginning of my new project **Task Management App (TMA)**, built with **React.js** and **Tailwind CSS**.  
+The goal is to create a simple yet powerful app to manage daily tasks with priority, status, and a clean UI.  
+This project marks an important step in my **Full Stack Development journey** and helps me strengthen my skills in component design, state management, and responsive frontend UI.
 
-- 📝 Add new tasks with title and description  
-- ⏰ Set task priority (High, Medium, Low)  
-- 🔁 Update task status (To-Do, In Progress, Completed)  
-- 🗑 Delete tasks  
-- 🎨 Responsive UI using HTML, CSS, and JavaScript  
-- 💾 LocalStorage support (for saving tasks in browser)  
+Stay tuned as I continue building and improving it day by day! 💻🔥
 
----
+## 🛠️ Project Setup & Folder Structure
 
-## 🧱 Tech Stack
+To build this project, I followed a clean setup process to learn and implement modern frontend development using **React.js (with Vite)** and **Tailwind CSS**.
 
-| Frontend        | Status        | Future Plan                |
-|----------------|---------------|----------------------------|
-| HTML5           | ✅ Complete    |                            |
-| CSS3            | ✅ Complete    | Tailwind/Bootstrap (next)  |
-| JavaScript (Vanilla) | ✅ Complete | React.js (later phase)     |
-| LocalStorage    | ✅ Implemented | Backend integration (next) |
+### 🧩 Step-by-Step Setup Process
 
----
+1. ✅ **Opened VS Code** and created a new folder for the project.
+2. ⚛️ **Initialized a React project using Vite**:
 
-## 🎯 Upcoming Features
+   ```bash
+   npm create vite@latest
 
-- 🔐 User authentication (login/signup)  
-- ☁️ Backend (Node.js + Express + MongoDB)  
-- 📊 Task filtering by date, priority, and status  
-- 📅 Calendar view  
-- 📁 Export tasks (PDF, CSV)  
+🚀 Selected React with JavaScript.
+💽 Installed dependencies:
+🎨 Installed Tailwind CSS for styling:
+🔧 Updated tailwind.config.js:
+📄 Added Tailwind directives to src/index.css:
 
----
+📁 Project Folder Structure
+This is the current working structure of my project:
 
-## 🚀 Getting Started
+src/
+├── components/
+│   ├── Header.jsx
+│   ├── TaskForm.jsx
+│   ├── TaskList.jsx
+│   ├── TaskCard.jsx
+│   └── Footer.jsx
+├── App.js
+├── index.js
+└── index.css
 
-### Clone the repository:
+components/: Contains all reusable UI components.
+App.js: Main component that connects everything.
+index.js: Entry point to render the app.
+index.css: Tailwind CSS styling applied here.
 
-```bash
-git clone https://github.com/DeepakSinghSoun/Daily-Work.git
-cd Daily-Work
+🧠 Main Files Worked On
+Below are the files I worked on to build the Task Management App:
+
+✅ App.js: App layout, state, and logic
+✅ Header.jsx: Title bar of the app
+✅ TaskForm.jsx: Input form for creating new tasks
+✅ TaskList.jsx: Displays all the task cards
+✅ TaskCard.jsx: UI for individual tasks
+✅ Footer.jsx: Simple footer message

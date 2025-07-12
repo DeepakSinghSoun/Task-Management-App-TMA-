@@ -1,40 +1,60 @@
-const Form = () => {
+import React, { useState } from "react";
+
+const TaskForm = ({ onAdd }) => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [priority, setPriority] = useState("Low");
+
+  const handleSubmit = () => {
+    if (!title || !description) return;
+
+    const newTask = {
+      id: Date.now(),
+      title,
+      description,
+      priority,
+      status: "Pending",
+    };
+
+    onAdd(newTask);
+    setTitle("");
+    setDescription("");
+    setPriority("Low");
+  };
+
   return (
-    <>
-        <h1 className="text-2xl font-bold mb-4">Add New Task</h1>
-
-        <label className="block mb-2 font-medium">Title</label>
-        <input
-            type="text"
-            placeholder="Enter task title"
-            className="border p-2 w-full mb-4 rounded"
-        />
-
-        <label className="block mb-2 font-medium">Description</label>
-        <textarea
-            placeholder="Enter task description"
-            className="border p-2 w-full mb-4 rounded h-32 resize-none"
-        />
-
-        <label className="block mb-2 font-medium">Priority</label>
-        <select
-            className="border p-2 w-full mb-4 rounded"
-            defaultValue=""
-        >
-            <option value="" disabled>
-                Select Priority
-            </option>
-            <option value="High">🔥 High (Urgent)</option>
-            <option value="Medium">💼 Medium (Normal)</option>
-            <option value="Low">🕓 Low (Not urgent)</option>
-        </select>
-
-
-        <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-            Add Task
-        </button>
-    </>
+    <div className="my-6">
+      <h2 className="text-xl font-semibold mb-4">Add New Task</h2>
+      <input
+        type="text"
+        placeholder="Title"
+        className="border p-2 w-full mb-4 rounded"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
+      <textarea
+        placeholder="Description"
+        className="border p-2 w-full mb-4 rounded"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
+      <select
+        className="border p-2 w-full mb-4 rounded"
+        value={priority}
+        onChange={(e) => setPriority(e.target.value)}
+      >
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+      </select>
+      <button
+        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        onClick={handleSubmit}
+      >
+        Add Task
+      </button>
+    </div>
   );
 };
 
-export default Form;
+export default TaskForm;
