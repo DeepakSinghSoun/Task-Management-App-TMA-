@@ -55,4 +55,4 @@ Below are the files I worked on to build the Task Management App:
 ✅ TaskForm.jsx: Input form for creating new tasks
 ✅ TaskList.jsx: Displays all the task cards
 ✅ TaskCard.jsx: UI for individual tasks
-✅ Footer.jsx: Simple footer message
+✅ Footer.jsx: Simple footer message.
